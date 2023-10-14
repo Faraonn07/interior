@@ -3,6 +3,14 @@ import { Button, Container,  Nav, Form, Navbar } from 'react-bootstrap';
 import Logo1 from "./Logo1.jpg";
 import '../components/Header.css'
 import "../components/RedactorBtn.css"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import Redactor from "./Redactor"
+import About from "./About"
+import Contacts from './Contacts';
+import HomePage from './HomePage';
+
+
+
 
 
 export default class Header extends Component {
@@ -21,7 +29,7 @@ export default class Header extends Component {
                     />   
                 </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                    <Navbar.Collapse id="responsive-navbar-nav "> 
+                    <Navbar.Collapse id="responsive-navbar-nav" > 
                     <Nav className='mr-auto'>
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/redactor">Redactor</Nav.Link>
@@ -37,10 +45,23 @@ export default class Header extends Component {
                 />
                 <Button variant="outline-success">Search</Button>
                 </Form>
+                <Nav className='mr-auto'>
+                        
+                        <Nav.Link href="/login">Login</Nav.Link>
+                        <Nav.Link href="/register">Register</Nav.Link>
+                    </Nav>
                     </Navbar.Collapse>
             </Container>
         </Navbar>
-       
+        
+       <Router>
+        <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route exact path='/redactor' component={Redactor} />
+            <Route exact path='/about' component={About} />
+            <Route exact path='/contacts' component={Contacts} />
+        </Switch>
+       </Router>
       </>
     );
   }

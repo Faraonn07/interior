@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import"../src/App.css"
-import Header from './components/Header'
+import HomeNav from './components/HomeNav';
+
 
 
 
 export default class App extends Component {
   render() {
     return (
-     <Header>
-      
-     </Header>
+      <HomeNav/>
     )
   }
 }

@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import RedactorBtn from './components/RedactorBtn';
-import HomeText from './components/HomeText';
+
+import { BrowserRouter } from 'react-router-dom';
+
+import App from './App';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <HomeText/>
-    <RedactorBtn/>
+    <BrowserRouter>
+    <App/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
