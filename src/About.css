@@ -1,0 +1,81 @@
+body {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    color: #21211e;
+    margin-top: 100px;
+  }
+  
+  .teammate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #21211e;
+    padding: 15px;
+    margin: 25px 25px;
+  }
+  
+  .profile-photo img {
+    max-width: 300px;
+    padding: 5px;
+    padding-left: 15px;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .info h3 {
+    color: #f5f6ea;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .info p {
+    color: #f5f6ea;
+    text-align: justify;
+  }
+  
+  .link-light {
+    color: #21211e;
+    text-decoration: none;
+    font-style: italic;
+    background: #5427a9;
+    width: fit-content;
+  }
+  
+  .link-light:hover {
+    color: #21211e;
+    background: #7a38f4;
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .teammate{
+      flex-direction: column;
+      background-color: #21211e;
+      
+     
+    }
+  
+    .info {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .info h3,
+    .info p {
+      text-align: center;
+      color: #f5f6ea;
+    }
+  
+    .profile-photo img {
+      padding: 0;
+      border-radius: 100%;
+      box-shadow: 0 0 0 3px #7a38f4;
+    }
+  }
+  

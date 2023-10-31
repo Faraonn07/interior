@@ -8,6 +8,8 @@ import Redactor from "./Redactor"
 import About from "./About"
 import Contacts from './Contacts';
 import HomePage from './HomePage';
+import Login from "./Login"
+import Register from "./Register"
 
 
 
@@ -60,6 +62,8 @@ export default class Header extends Component {
             <Route exact path='/redactor' component={Redactor} />
             <Route exact path='/about' component={About} />
             <Route exact path='/contacts' component={Contacts} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/register' component={Register} />
         </Switch>
        </Router>
       </>
