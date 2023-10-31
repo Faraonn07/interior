@@ -9,7 +9,7 @@ export default class About extends Component {
   
   <div class="teammate reverse">
     <div class="profile-photo">
-      <img src="Dev1.JPG" />
+      <img src="Dev1.JPG" alt=""/>
     </div>
     <div class="info">
       <h3>Фаринич Ярослав</h3>
@@ -21,7 +21,7 @@ export default class About extends Component {
   </div>
   <div class="teammate">
     <div class="profile-photo">
-      <img src="Dev2.JPG" />
+      <img src="Dev2.JPG" alt="" />
     </div>
     <div class="info">
       <h3>Попович Олександр</h3>
