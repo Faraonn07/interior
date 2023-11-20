@@ -47,7 +47,7 @@
   #eye {
     width: 20px;
     height: 20px;
-    background-image: url('C:/Users/ondxxr/Desktop/uzhnu/interior/public/eye2.png');
+    background-image: url('../img/eye1.png');
     background-size: cover;
     cursor: pointer;
     position: absolute;
@@ -56,7 +56,7 @@
   }
   
   #eye.active {
-    background-image: url('C:/Users/ondxxr/Desktop/uzhnu/interior/public/eye1.png');
+    background-image: url('../img/eye2.png');
   }
   
   button {
