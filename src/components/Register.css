@@ -1,0 +1,70 @@
+#register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+  }
+  
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #9758f4;
+  }
+  
+  #register-box {
+    background-color: #21211e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #eye {
+    width: 20px;
+    height: 20px;
+    background-image: url('C:/Users/ondxxr/Desktop/uzhnu/interior/public/eye2.png');
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    right: 13px;
+    top: calc(50% + 5px);
+  }
+  
+  #eye.active {
+    background-image: url('C:/Users/ondxxr/Desktop/uzhnu/interior/public/eye1.png');
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #1f414b;
+  }
+  
+  button:hover {
+    background-color: #4fa3d1;
+  }
+  
