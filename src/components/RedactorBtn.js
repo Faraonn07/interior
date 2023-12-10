@@ -4,7 +4,7 @@ import "../components/RedactorBtn"
 export default function RedactorBtn() {
   return (
     <div class="wrapper">
-  <a class="cta" href = 'http://localhost:5173'>
+  <a class="cta" href="/redactor">
     <span>Go to Redactor</span>
     <span>
       <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">

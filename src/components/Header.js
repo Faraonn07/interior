@@ -4,6 +4,7 @@ import Logo1 from "./Logo1.jpg";
 import '../components/Header.css'
 import "../components/RedactorBtn.css"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import Redactor from "./Redactor"
 import About from "./About"
 import Contacts from './Contacts';
 import HomePage from './HomePage';
@@ -29,7 +30,7 @@ export default class Header extends Component {
             <Navbar.Collapse id="responsive-navbar-nav" > 
               <Nav className='mr-auto'>
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href = 'http://localhost:5173'>Redactor</Nav.Link>
+                <Nav.Link href="/redactor">Redactor</Nav.Link>
                 <Nav.Link href="/about">About us</Nav.Link>
                 <Nav.Link href="/contacts">Contacts</Nav.Link>
               </Nav>
@@ -53,6 +54,7 @@ export default class Header extends Component {
         <Router>
           <Switch>
             <Route exact path='/' component={HomePage} />
+            <Route exact path='/redactor' component={Redactor} />
             <Route exact path='/about' component={About} />
             <Route exact path='/contacts' component={Contacts} />
             <Route exact path='/login' component={Login} />

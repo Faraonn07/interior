@@ -15,9 +15,9 @@ export const useGrid = () => {
 
   const gridToVector3 = (gridPosition, width = 1, height = 1) => {
     return new THREE.Vector3(
-      width / map.gridDivision / 2 + gridPosition[0] / map.gridDivision,
-      0,
-      height / map.gridDivision / 2 + gridPosition[1] / map.gridDivision
+        width / map.gridDivision / 2 + gridPosition[0] / map.gridDivision,
+        0,
+        height / map.gridDivision / 2 + gridPosition[1] / map.gridDivision
     );
   };
 
@@ -26,3 +26,4 @@ export const useGrid = () => {
     gridToVector3,
   };
 };
+

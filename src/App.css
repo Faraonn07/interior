@@ -1,0 +1,79 @@
+.fixed {
+    position: fixed;
+}
+
+.inset-4 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.pointer-events-auto {
+    pointer-events: auto;
+}
+
+.space-x-4 > :not(template) ~ :not(template) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.bg-slate-500 {
+    background-color: #657786;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.drop-shadow-md {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.hover\:bg-slate-800:hover {
+    background-color: #2f3848;
+}
+
+.transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.w-6 {
+    width: 1.5rem;
+}
+
+.h-6 {
+    height: 1.5rem;
+}

@@ -246,18 +246,6 @@ export const Experience = () => {
       {buildMode && !shopMode && (
         <Grid infiniteGrid fadeDistance={50} fadeStrength={5} />
       )}
-      {!buildMode &&
-        characters.map((character) => (
-          <AnimatedWoman
-            key={character.id}
-            id={character.id}
-            path={character.path}
-            position={gridToVector3(character.position)}
-            hairColor={character.hairColor}
-            topColor={character.topColor}
-            bottomColor={character.bottomColor}
-          />
-        ))}
     </>
   );
 };
