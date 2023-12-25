@@ -1,12 +1,15 @@
 import pathfinding from "pathfinding";
-import { Server } from "socket.io";
+import {Server} from "socket.io";
+import dotenv from "dotenv"
+
+dotenv.config();
 const io = new Server({
   cors: {
-    origin: "http://localhost:3000",
+    origin: process.env.DOMAIN,
   },
 });
 
-io.listen(3001);
+io.listen(process.env.PORT);
 
 const characters = [];
 
@@ -412,8 +415,8 @@ const map = {
 };
 
 const grid = new pathfinding.Grid(
-  map.size[0] * map.gridDivision,
-  map.size[1] * map.gridDivision
+    map.size[0] * map.gridDivision,
+    map.size[1] * map.gridDivision
 );
 
 const finder = new pathfinding.AStarFinder({
@@ -440,15 +443,15 @@ const updateGrid = () => {
       return;
     }
     const width =
-      item.rotation === 1 || item.rotation === 3 ? item.size[1] : item.size[0];
+        item.rotation === 1 || item.rotation === 3 ? item.size[1] : item.size[0];
     const height =
-      item.rotation === 1 || item.rotation === 3 ? item.size[0] : item.size[1];
+        item.rotation === 1 || item.rotation === 3 ? item.size[0] : item.size[1];
     for (let x = 0; x < width; x++) {
       for (let y = 0; y < height; y++) {
         grid.setWalkableAt(
-          item.gridPosition[0] + x,
-          item.gridPosition[1] + y,
-          false
+            item.gridPosition[0] + x,
+            item.gridPosition[1] + y,
+            false
         );
       }
     }
@@ -493,7 +496,7 @@ io.on("connection", (socket) => {
 
   socket.on("move", (from, to) => {
     const character = characters.find(
-      (character) => character.id === socket.id
+        (character) => character.id === socket.id
     );
     const path = findPath(from, to);
     if (!path) {
@@ -521,8 +524,8 @@ io.on("connection", (socket) => {
     console.log("user disconnected");
 
     characters.splice(
-      characters.findIndex((character) => character.id === socket.id),
-      1
+        characters.findIndex((character) => character.id === socket.id),
+        1
     );
     io.emit("characters", characters);
   });
