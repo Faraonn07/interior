@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  GLOBAL_VAR: "https://ws-host.onrender.com"
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,4 +45,3 @@ jobs:
         REMOTE_USER: ${{ secrets.USERNAME }}
         TARGET: ${{ secrets.REMOTE_TARGET }}
         EXCLUDE: "/node_modules/"
-        
