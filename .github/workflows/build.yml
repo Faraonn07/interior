@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  GLOBAL_VAR: "https://ws-host.onrender.com"
+ REACT_APP_API_URL : "https://ws-host.onrender.com"
 
 
 jobs:
