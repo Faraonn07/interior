@@ -1,11 +1,12 @@
 import pathfinding from "pathfinding";
 import {Server} from "socket.io";
 import dotenv from "dotenv"
+var cors = require("cors")
 
 dotenv.config();
 const io = new Server({
   cors: {
-    origin: process.env.DOMAIN,
+    origin:"*"
   },
 });
 
